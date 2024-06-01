@@ -1,0 +1,31 @@
+<% layout('layouts/boilerplate') -%>
+
+<header>
+    <a href=""class="logo">MovieKhojo</a>
+
+<div class="h-main">
+   
+    <% if(!currentUser){%>
+        <a class="h-btn" href="/login">Login</a>
+      <% }else{%>
+        <a href="/login" class="h-btn">Logout</a>
+    <%}%>
+
+</div>
+
+</header>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Unlimited movies</h1>
+        <h4>Watch anywhere. Cancel anytime.</h4>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="hero-in">
+            
+            <a href="/register" class="hero-btn">Get Started   <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="hero-img">
+        <img src="https://images1.zeebiz.com/images/ZB-EN/900x1600/2023/12/22/1703239753611_RomanticMovies.jpg" alt="">
+    </div>
+</section>

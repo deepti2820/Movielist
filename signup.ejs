@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/css/signup.css">
+
+
+<% layout("layouts/boilerplate")  -%>
+
+
+
+<div class="wrapper">
+    <div class="form-box login">
+      <h2>Sign up</h2>
+      <form action="/register" method="POST">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" name="username"  required>
+          <label>Username</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" name="email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" name="password"  required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forget">
+          <label><input type="checkbox" >I accept the terms and conditions</label>
+        </div>
+        <button type="submit" class="btn">Sign up</button>
+        <div class="login-register">
+          <p>Already have an account? <a href="/login" class="register-link">Log in</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+
+  
+  
+  

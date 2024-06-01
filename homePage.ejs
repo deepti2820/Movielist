@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Draggable Image Slider | CodingNepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/homePage.css">
+  
+  </head>
+  <body style="background-color: black;">
+    
+  
+    <div class="containe">
+      <div class="header">
+          <div class="search-box">
+              <form action="/search" method="get">
+                <input type="text" placeholder="Search Your Movie" name="movie" class="input-box" required>
+  
+                <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+              </form>
+  
+          </div>
+      </div>
+
+      <div class="h-main">
+       
+        <h4 style="color: white;">Hello <%=currentUser.username%></h4>
+    </div>
+
+  </div>
+  
+  
+  
+  
+  
+  
+  
+    
+    <div class="flex-container">
+      <% if(use.drama.length>0){%>
+        <div class="col-lg-4 mb-3 flex-wrap">
+          <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+            <img src="<%= use.drama[0].image%>" class="card-img-top" alt="...">
+            <div class="overlay-text"><%=use.drama.length%>movies</div>
+            </div>
+            <h5>Drama PlayList</h5>
+            <a href="/drama/playlist">View full playlist</a>
+          </div>
+    <%}%>
+
+    <% if(use.action.length>0){%>
+      <div class="col-lg-4 mb-3 flex-wrap">
+        <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+          <img src="<%= use.action[0].image%>" class="card-img-top" alt="...">
+          <div class="overlay-text"><%=use.action.length%>movies</div>
+          </div>
+          <h5>Action PlayList</h5>
+          <a href="/action/playlist">View full playlist</a>
+        </div>
+  <%}%>
+
+  <% if(use.horror.length>0){%>
+    <div class="col-lg-4 mb-3 flex-wrap">
+      <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+        <img src="<%= use.horror[0].image%>" class="card-img-top" alt="...">
+        <div class="overlay-text"><%=use.horror.length%>movies</div>
+        </div>
+        <h5>Horror PlayList</h5>
+        <a href="/horror/playlist">View full playlist</a>
+      </div>
+<%}%>
+
+<% if(use.comedy.length>0){%>
+  <div class="col-lg-4 mb-3 flex-wrap">
+    <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+      <img src="<%= use.comedy[0].image%>" class="card-img-top" alt="...">
+      <div class="overlay-text"><%=use.comedy.length%>movies</div>
+      </div>
+      <h5>Comedy PlayList</h5>
+      <a href="/comedy/playlist">View full playlist</a>
+    </div>
+<%}%>
+
+<% if(use.fantasy.length>0){%>
+  <div class="col-lg-4 mb-3 flex-wrap">
+    <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+      <img src="<%= use.fantasy[0].image%>" class="card-img-top" alt="...">
+      <div class="overlay-text"><%=use.fantasy.length%>movies</div>
+      </div>
+      <h5>fantasy PlayList</h5>
+      <a href="/fantasy/playlist">View full playlist</a>
+    </div>
+<%}%>
+
+     </div>
+
+     <script src="https://kit.fontawesome.com/cf8ffcf7af.js" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </body>
+</html>

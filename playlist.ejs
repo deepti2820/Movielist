@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Library</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/playlist.css">
+
+</head>
+
+<body style="background-color: black;">
+    
+    
+     <div class="flex-container">
+      <%if(movie==='drama'){%>
+      <% for(let movie of movies.drama){%>
+        <div class="col-lg-4 mb-3 flex-wrap">
+            <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+                <img src="<%= movie.image%>" class="card-img-top" alt="...">
+                <div class="overlay-text">
+                  <form class="d-inline-block" action="/<%=movies._id%>/drama/<%=movie._id%>?_method=DELETE" method="POST">
+                      <button><i class="fa-solid fa-xmark"></i></button> </div>
+                  </form>
+                 
+            </div>
+            <h5 class="card-title"><%=movie.name%></h5>
+              <h5 class="card-title"><%= movie.year%></h5>
+          </div>
+    <%} }%>
+
+    <%if(movie==='horror'){%>
+        <% for(let movie of movies.horror){%>
+          <div class="col-lg-4 mb-3 flex-wrap">
+              <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+                  <img src="<%= movie.image%>" class="card-img-top" alt="...">
+                  <div class="overlay-text">
+                    <form class="d-inline-block" action="/<%=movies._id%>/horror/<%=movie._id%>?_method=DELETE" method="POST">
+                        <button><i class="fa-solid fa-xmark"></i></button> </div>
+                    </form>
+              </div>
+              <h5 class="card-title"><%=movie.name%></h5>
+                <h5 class="card-title"><%= movie.year%></h5>
+            </div>
+      <%} }%>
+
+      <%if(movie==='action'){%>
+        <% for(let movie of movies.action){%>
+          <div class="col-lg-4 mb-3 flex-wrap">
+              <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+                  <img src="<%= movie.image%>" class="card-img-top" alt="...">
+                  <div class="overlay-text">
+                    <form class="d-inline-block" action="/<%=movies._id%>/action/<%=movie._id%>?_method=DELETE" method="POST">
+                        <button><i class="fa-solid fa-xmark"></i></button> </div>
+                    </form>
+              </div>
+              <h5 class="card-title"><%=movie.name%></h5>
+                <h5 class="card-title"><%= movie.year%></h5>
+            </div>
+      <%} }%>
+
+      <%if(movie==='comedy'){%>
+        <% for(let movie of movies.comedy){%>
+          <div class="col-lg-4 mb-3 flex-wrap">
+              <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+                  <img src="<%= movie.image%>" class="card-img-top" alt="...">
+                  <div class="overlay-text">
+                    <form class="d-inline-block" action="/<%=movies._id%>/comedy/<%=movie._id%>?_method=DELETE" method="POST">
+                        <button><i class="fa-solid fa-xmark"></i></button> </div>
+                    </form>
+              </div>
+              <h5 class="card-title"><%=movie.name%></h5>
+                <h5 class="card-title"><%= movie.year%></h5>
+            </div>
+      <%} }%>
+
+      <%if(movie==='fantasy'){%>
+        <% for(let movie of movies.fantasy){%>
+          <div class="col-lg-4 mb-3 flex-wrap">
+              <div class="card text-center shadow-lg mx-auto" style="width: 18rem;">
+                  <img src="<%= movie.image%>" class="card-img-top" alt="...">
+                  <div class="overlay-text">
+                    <form class="d-inline-block" action="/<%=movies._id%>/fantasy/<%=movie._id%>?_method=DELETE" method="POST">
+                        <button><i class="fa-solid fa-xmark"></i></button> </div>
+                    </form>
+              </div>
+              <h5 class="card-title"><%=movie.name%></h5>
+                <h5 class="card-title"><%= movie.year%></h5>
+            </div>
+      <%} }%>
+     </div>
+    
+    <script src="https://kit.fontawesome.com/cf8ffcf7af.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
